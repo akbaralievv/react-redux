@@ -32,12 +32,19 @@ function AboutPage() {
             type:'DELETES_ALL',
         })
     }
+    const plus=()=>{
+        dispatch({
+            type:'PLUS'
+        })
+    }
   return (
     <>
         <h1>{user.age} {user.name}</h1>
         <input value={inputVal} type="text"placeholder="title" onChange={changeInput}/>
         <button onClick={changeAboutTitle}>change</button>
         <button onClick={deletes}>delete title</button>
+        <button onClick={{plus}}>+</button>
+        <button>-</button>
     </>
   )
 }
